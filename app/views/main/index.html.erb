@@ -1,0 +1,27 @@
+<h1>Display data</h1>
+
+<table border 2px solid black>
+    <thade>
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Section</th>
+            <th>Age</th>
+            <th>Action</th>
+        </tr>
+    </thade>
+    <tbody>
+        <% @mains.each do |main| %>
+        <tr>
+            <% @id = main.id %>
+            <td><%= @id %></td>
+            <td><%= main.name %></td>
+            <td><%= main.email %></td>
+            <td><%= main.section %></td>
+            <td><%= main.age %></td>
+            <td><%= link_to 'Show', "/show/#{@id}" %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
